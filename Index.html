@@ -56,7 +56,7 @@
       scene.add(light);
 
       const loader = new GLTFLoader();
-      loader.load('/mnt/data/Покана.glb', gltf => {
+      loader.load('models/invite.glb', gltf => {
         model = gltf.scene;
         scene.add(model);
 
@@ -98,7 +98,7 @@
       action.loop = THREE.LoopOnce;
       action.timeScale = forward ? 1 : -1;
 
-      if (!forward) action.time = action.getClip().duration; // Start from end if reversing
+      if (!forward) action.time = action.getClip().duration;
 
       action.play();
       currentAction = action;
